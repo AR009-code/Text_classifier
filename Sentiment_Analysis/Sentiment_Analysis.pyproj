@@ -28,7 +28,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Naive_bayes_text_classifier.py" />
-    <Compile Include="text_classifier_with_nltk.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="negative-words.csv" />
