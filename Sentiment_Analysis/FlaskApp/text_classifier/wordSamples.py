@@ -1,12 +1,12 @@
 
 import pandas as pd
 
-df1= pd.read_csv('./positive-words.csv')
-df2= pd.read_csv('./negative-words.csv')
+df1= pd.read_csv('./text_classifier/positive-words.csv')
+df2= pd.read_csv('./text_classifier/negative-words.csv')
 
 __pwords=df1.values.tolist()
 __nwords=df2.values.tolist()
-__stop_words= set([
+stop_words= set([
     'a', 'an', 'the', 'and', 'or', 'but', 'be', 'by', 'for', 'from', 'has', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'to', 'was', 'were', 'will', 'with' 
     ])
 
@@ -27,4 +27,4 @@ class wordSamples:
         return __labels
 
     def getStopWords(self):
-        return __stop_words
+        return stop_words

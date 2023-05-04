@@ -1,7 +1,7 @@
 
 import re
 import numpy as np
-import wordSamples as ws
+import text_classifier.wordSamples as ws
 
 
 # sample training data
@@ -13,10 +13,10 @@ texts = [
     "This is terrible.",
     "This game is very boring",
     "I appreciated your words so much",
+    "Today I am accomplished to complete the project",
 ]
 
-words= ws.wordSamples
-labels = np.array([1, 1, 1, 0, 0, 0, 1])  # 1 for positive, 0 for negative
+labels = np.array([1, 1, 1, 0, 0, 0, 1, 1])  # 1 for positive, 0 for negative
  
 print("sample text: \n{0}".format(texts))
 # define a function to preprocess the text
@@ -28,9 +28,9 @@ def preprocess_text(text):
     # remove digits
     text = re.sub(r'\d+', '', text)
     # remove stopwords (optional)
-    stopwords = ws.wordSamples.getStopWords()
+    stopwords = ws.wordSamples.getStopWords(ws)
     words = text.split()
-    words = [word for word in words if word not in stopwords]
+    #words = [word for word in words if word not in stopwords]
     # return preprocessed text as a string
     return ' '.join(words)
 
@@ -74,30 +74,4 @@ log_p_positive = np.log(class_prior[1]) + np.sum(np.log(p_word_positive) * matri
 log_p_negative = np.log(class_prior[0]) + np.sum(np.log(p_word_negative) * matrix, axis=1)
 predictions = (log_p_positive > log_p_negative).astype(int)
 
-# sample test data
-test_texts = [
-    "I love this product!",
-    "This movie is boring.",
-    "I liked that you had appreciated my gameplay."
-]
 
-# preprocess the test data and convert to word frequencies
-test_word_counts = []
-for text in test_texts:
-    text = preprocess_text(text)
-    words = text.split()
-    test_word_counts.append({word: words.count(word) for word in words})
-
-test_matrix = np.zeros((len(test_texts), num_words))
-for i, word_count in enumerate(test_word_counts):
-    for word, count in word_count.items():
-        if word in word_to_index:
-            j = word_to_index[word]
-            test_matrix[i, j] = count
-
-# classify the test data and print the results
-test_log_p_positive = np.sum(np.log(p_word_positive) * test_matrix, axis=1)
-test_log_p_negative = np.sum(np.log(p_word_negative) * test_matrix, axis=1)
-test_predictions = (test_log_p_positive > test_log_p_negative).astype(int)
-for i, text in enumerate(test_texts):
-    print(f"{text} - {test_predictions[i]}")

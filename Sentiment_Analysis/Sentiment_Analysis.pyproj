@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fa2acde9-c32d-4fc0-82a8-bc7f002959f5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>playground.py</StartupFile>
+    <StartupFile>FlaskApp\testing_model.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,17 +21,27 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="FlaskApp\app.py" />
     <Compile Include="playground.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="wordSamples.py">
+    <Compile Include="FlaskApp\testing_model.py" />
+    <Compile Include="FlaskApp\text_classifier\wordSamples.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Naive_bayes_text_classifier.py" />
+    <Compile Include="FlaskApp\text_classifier\training_model.py" />
+    <Compile Include="FlaskApp\text_classifier\__init__.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="negative-words.csv" />
-    <Content Include="positive-words.csv" />
+    <Content Include="FlaskApp\templates\index.html" />
+    <Content Include="FlaskApp\text_classifier\negative-words.csv" />
+    <Content Include="FlaskApp\text_classifier\positive-words.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FlaskApp\" />
+    <Folder Include="FlaskApp\static\" />
+    <Folder Include="FlaskApp\templates\" />
+    <Folder Include="FlaskApp\text_classifier\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
