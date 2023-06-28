@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">Sentiment Analysis</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -18,48 +18,63 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Project(Sem-8)
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="https://docs.google.com/presentation/d/e/2PACX-1vQiuC0HrXcUAFOfCeZ7fSASVJNVkkotkHHPFKPMAV-FH7eEox5HBRDbThwGZLnuwg/pub?start=false&loop=false&delayms=3000" target="_blank">Go to ppt</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1DltAKv7f13x60mZG9CCHs3kz2ZsfR37a/view?usp=sharing" target="_blank">Go to Doc</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+                            Project(Sem-7)
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="/old_project">Go to project</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><a class="dropdown-item" href="https://docs.google.com/presentation/d/e/2PACX-1vQiuC0HrXcUAFOfCeZ7fSASVJNVkkotkHHPFKPMAV-FH7eEox5HBRDbThwGZLnuwg/pub?start=false&loop=false&delayms=3000" target="_blank">Go to ppt</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1DltAKv7f13x60mZG9CCHs3kz2ZsfR37a/view?usp=sharing" target="_blank">Go to Doc</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="#">About Group</a>
                     </li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+   
             </div>
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container my-3">
         <form method="post">
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <label for="exampleFormControlTextarea1" class="form-label"></label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter something" name="text" rows="3">{{textArea}}</textarea>
             </div>
             {% if s_code == 1 %}
             <div class="d-block">
                 <p>
-                    The sentiment of the text :
+                    {{textArea}}
                     {% if status[0][1] == 1 %}
                     <span class="badge bg-success fs-6">positive</span>
                     {% else %}
                     <span class="badge bg-danger fs-6">negative</span>
                     {% endif %}
                 </p>
+                <p>Result Analysis:</p>
+                <p><span>trained words:</span>{{tw}}</p>
+                <p><span>log of trained p_words</span>{{log_p}}</p>
+                <p><span>log of trained n_words</span>{{log_n}}</p>
+                <p><span>modified_positive_count</span>{{mtpc}}</p>
+                <p><span>modified_negative_count</span>{{mtnc}}</p>
+                <p><span>test words</span>{{wc}}</p>
+                <p><span>test matrix</span>{{t_matrix}}</p>
+                <p><span>log of test p_words</span>{{t_log_p}}</p>
+                <p><span>log of test n_words</span>{{t_log_n}}</p>
 
             </div>
             {% elif s_code == -1 %}
