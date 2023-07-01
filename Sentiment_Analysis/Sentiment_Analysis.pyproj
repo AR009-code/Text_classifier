@@ -34,13 +34,14 @@
     <Compile Include="FlaskApp\sample words\__init__.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="negative_text.csv" />
+    <Content Include="positive_text.csv" />
     <Content Include="FlaskApp\templates\index.html" />
-    <Content Include="FlaskApp\sample words\negative-words.csv" />
-    <Content Include="FlaskApp\sample words\positive-words.csv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="FlaskApp\" />
     <Folder Include="FlaskApp\static\" />
+    <Folder Include="FlaskApp\static\Image\" />
     <Folder Include="FlaskApp\templates\" />
     <Folder Include="FlaskApp\sample words\" />
   </ItemGroup>

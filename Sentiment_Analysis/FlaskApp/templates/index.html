@@ -6,32 +6,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<body class="bg-primary-subtle">
+    <nav class="navbar navbar-expand-lg bg-success bg-gradient">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Sentiment Analysis</a>
+            <a class="navbar-brand text-bg-success rounded-top fw-bolder" href="#"><img class="w-25 p-2" src={{logo_file}}/>Sentiment Analysis</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <ul class="navbar-nav btn-group me-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-3">
+                        <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown mx-3">
+                        <button type="button" class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Project(Sem-8)
-                        </a>
+                        </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://docs.google.com/presentation/d/e/2PACX-1vQiuC0HrXcUAFOfCeZ7fSASVJNVkkotkHHPFKPMAV-FH7eEox5HBRDbThwGZLnuwg/pub?start=false&loop=false&delayms=3000" target="_blank">Go to ppt</a></li>
+                            <li><a class="dropdown-item" href="https://docs.google.com/presentation/d/1DG7xSsisafNbOAFwfLOKYv_DCcaUI6f6/edit?usp=sharing&ouid=105882359610269347353&rtpof=true&sd=true" target="_blank">Go to ppt</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1DltAKv7f13x60mZG9CCHs3kz2ZsfR37a/view?usp=sharing" target="_blank">Go to Doc</a></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1vhpaAZ33Ntqcpi_y_WYL0DEE0ddHnQx3/view?usp=sharing" target="_blank">Go to Doc</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item dropdown mx-3">
+                        <button type="button" class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Project(Sem-7)
-                        </a>
+                        </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/old_project">Go to project</a></li>
                             <li><hr class="dropdown-divider"/></li>
@@ -40,24 +40,72 @@
                             <li><a class="dropdown-item" href="https://drive.google.com/file/d/1DltAKv7f13x60mZG9CCHs3kz2ZsfR37a/view?usp=sharing" target="_blank">Go to Doc</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Group</a>
+                    <li class="nav-item mx-3">
+                        <a href="/about_group"><button class="btn btn-primary">About Group</button></a>
                     </li>
+
+                    
+                
                 </ul>
    
             </div>
         </div>
     </nav>
 
+    {% if group_page == 1 %}
+    <div class="container-fluid">
+        <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
+            <img src={{pf1}} class="card-img-top" style="height:350px" alt="img">
+            <div class="card-body">
+                <h5 class="card-title">SOUDEEP DUTTA</h5>
+                <p class="card-text">BWU/ BTS/ 19/ 025</p>
+                <p class="card-text">B.TECH (CSE) 4th YEAR</p>
+            </div>
+        </div>
+
+        <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
+            <img src={{pf2}} class="card-img-top" style="height:350px" alt="img">
+            <div class="card-body">
+                <h5 class="card-title">SOUPARNA BISWAS</h5>
+                <p class="card-text">BWU/ BTS/ 19/ 010</p>
+                <p class="card-text">B.TECH (CSE) 4th YEAR</p>
+
+            </div>
+        </div>
+        <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
+            <img src={{pf3}} class="card-img-top" style="height:350px" alt="img">
+            <div class="card-body">
+                <h5 class="card-title">AISHWARYA ROY</h5>
+                <p class="card-text">BWU/ BTS/ 19/ 009</p>
+                <p class="card-text">B.TECH (CSE) 4th YEAR</p>
+
+            </div>
+        </div>
+        <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
+            <img src={{pf4}} class="card-img-top" style="height:350px"  alt="img">
+            <div class="card-body">
+                <h5 class="card-title">SUBHADEEP NEOGI</h5>
+                <p class="card-text">BWU/ BTS/ 19/ 058</p>
+                <p class="card-text">B.TECH (CSE) 4th YEAR</p>
+
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if home_page == 1 %}
     <div class="container my-3">
+        <p class="fw-normal fst-italic fs-4 text-center">A text-based classifier tool that using Naive Bayes Algorithm</p>
+        <p class="fw-bold fs-5 fst-italic text-center">PROJECT II (PROJ-CS881)</p>
+        <p class="fw-bold fs-6 fst-italic text-center">By GROUP NUMBER - 12</p>
         <form method="post">
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label"></label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter something" name="text" rows="3">{{textArea}}</textarea>
+                <textarea class="form-control border border-3 border-primary bg-dark text-white w-75" id="exampleFormControlTextarea1" placeholder="Enter something" name="text" rows="4">{{textArea}}</textarea>
             </div>
             {% if s_code == 1 %}
             <div class="d-block">
-                <p>
+                <p class="fs-6 fw-bold">
                     {{textArea}}
                     {% if status[0][1] == 1 %}
                     <span class="badge bg-success fs-6">positive</span>
@@ -65,16 +113,37 @@
                     <span class="badge bg-danger fs-6">negative</span>
                     {% endif %}
                 </p>
-                <p>Result Analysis:</p>
-                <p><span>trained words:</span>{{tw}}</p>
-                <p><span>log of trained p_words</span>{{log_p}}</p>
-                <p><span>log of trained n_words</span>{{log_n}}</p>
-                <p><span>modified_positive_count</span>{{mtpc}}</p>
-                <p><span>modified_negative_count</span>{{mtnc}}</p>
-                <p><span>test words</span>{{wc}}</p>
-                <p><span>test matrix</span>{{t_matrix}}</p>
-                <p><span>log of test p_words</span>{{t_log_p}}</p>
-                <p><span>log of test n_words</span>{{t_log_n}}</p>
+                <p class="badge text-bg-primary fs-5">Result Analysis:</p>
+                <ul class="list-group my-3">
+                    <li class="list-group-item bg-secondary-subtle">
+                        <span class="badge text-bg-info fs-6">trained words:</span><p class="rounded text-bg-secondary p-2 my-2">{{tw}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info fs-6">modified_positive_count: </span><p class="rounded text-bg-secondary p-2 my-2">{{mtpc}}</p>
+                    </li>
+                    <li class="list-group-item bg-secondary-subtle">
+                        <span class="badge text-bg-info fs-6">modified_negative_count: </span><p class="rounded text-bg-secondary p-2 my-2">{{mtnc}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info fs-6">log of trained p_words: </span><p class="rounded text-bg-secondary p-2 my-2">{{log_p}}</p>
+                    </li>
+                    <li class="list-group-item bg-secondary-subtle">
+                        <span class="badge text-bg-info fs-6">log of trained n_words: </span><p class="rounded text-bg-secondary p-2 my-2">{{log_n}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info fs-6">test words: </span><p class="rounded text-bg-secondary p-2 my-2">{{wc}}</p>
+                    </li>
+                    <li class="list-group-item bg-secondary-subtle">
+                        <span class="badge text-bg-info fs-6">test matrix: </span><p class="rounded text-bg-secondary p-2 my-2">{{t_matrix}}</p>
+                    </li>
+                    <li class="list-group-item">
+                        <span class="badge text-bg-info fs-6">log of test p_words: </span><p class="rounded text-bg-secondary p-2 my-2">{{t_log_p}}</p>
+                    </li>
+                    <li class="list-group-item bg-secondary-subtle">
+                        <span class="badge text-bg-info fs-6">log of test n_words: </span><p class="rounded text-bg-secondary p-2 my-2">{{t_log_n}}</p>
+                    </li>
+
+                </ul>
 
             </div>
             {% elif s_code == -1 %}
@@ -86,5 +155,6 @@
             <button class="btn btn-primary mx-2" value="reset" name="action2">Reset</button>
         </form>
     </div>
+    {% endif %}
 </body>
 </html>

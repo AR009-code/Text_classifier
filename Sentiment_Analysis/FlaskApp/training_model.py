@@ -15,10 +15,36 @@ texts = [
    "People loves me a lot",
    "I know you like me so much",
    "People always like me",
-   "I like your inspiraation"
+   "I like your inspiraation",
+   "The book received a favorable review.",
+    "The business outlook for next year is favorable.",
+    "The fearless firefighter rescued the cat from the burning building.",
+    "The whole town is in festive mood .",
+    "When I do a good workout, l feel fine.",
+    "He is really a fine-looking young man.",
+    "He was an entertaining travelling companion.",
+    "The speech aroused the enthusiasm of the students.",
+    "I feel tired this morning.",
+    "He is my enemy.",
+    "That soup tastes disgusting!",
+    "It is a disheartening history to read.",
+    "The students should not dishonour their teachers.",
+    "I am completely disgusted with her.",
+    "He regarded their proposal with disfavor",
+    "I am so excited about the concert.",
+    "He is my best friend.",
+    "I am happy with my girlfriend.",
+    "He's not rich, but he's happy.",
+    "The cat seems extremely happy.",
+    "The decision was taken by acclamation .",
+    "I am sorry to disappoint you",
+    "I disagree strongly with this idea.",
+    "it was a difficult choice",
+    "He's acting like a complete dick.",
+    "The devil is good when he is pleased.",
 ]
 
-labels = np.array([1, 0, 1, 1,1, 0, 1, 1, 1, 1 ])  # 1 for positive, 0 for negative
+labels = np.array([1, 0, 1, 1,1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0])  # 1 for positive, 0 for negative
  
 #print("sample text: \n{0}".format(texts))
 print("The defined stop words :", ws.getStopWords())

@@ -4,9 +4,9 @@ import os
 import nltk
 from nltk.corpus import stopwords
 
-#wordDir=os.path.join(os.getcwd(),'FlaskApp\sample words')
-#df1= pd.read_csv('{0}\\positive-words.csv'.format(wordDir))
-#df2= pd.read_csv('{0}\\negative-words.csv'.format(wordDir))
+#wordDir=os.path.join(os.getcwd(),'sample words')
+#df1= pd.read_csv('./positive-text.csv')
+#df2= pd.read_csv('./negative-text.csv')
 
 #__pwords=df1.values.tolist()
 #__nwords=df2.values.tolist()
