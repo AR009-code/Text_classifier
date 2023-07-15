@@ -9,7 +9,7 @@
 <body class="bg-primary-subtle">
     <nav class="navbar navbar-expand-lg bg-success bg-gradient">
         <div class="container-fluid">
-            <a class="navbar-brand text-bg-success rounded-top fw-bolder" href="#"><img class="w-25 p-2" src={{logo_file}}/>Sentiment Analysis</a>
+            <a class="navbar-brand text-bg-success rounded-top fw-bolder" href="#"><img class="w-25 p-2" src={{logo_file}} />Sentiment Analysis</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -34,7 +34,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/old_project">Go to project</a></li>
-                            <li><hr class="dropdown-divider"/></li>
+                            <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="https://docs.google.com/presentation/d/e/2PACX-1vQiuC0HrXcUAFOfCeZ7fSASVJNVkkotkHHPFKPMAV-FH7eEox5HBRDbThwGZLnuwg/pub?start=false&loop=false&delayms=3000" target="_blank">Go to ppt</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="https://drive.google.com/file/d/1DltAKv7f13x60mZG9CCHs3kz2ZsfR37a/view?usp=sharing" target="_blank">Go to Doc</a></li>
@@ -44,19 +44,30 @@
                         <a href="/about_group"><button class="btn btn-primary">About Group</button></a>
                     </li>
 
-                    
-                
+
+
                 </ul>
-   
+
             </div>
         </div>
     </nav>
 
     {% if group_page == 1 %}
     <div class="container-fluid">
+        <h2 class="text-center fst-italic"><u>GUIDE</u></h2>
+        <div class="card d-flex justify-content-center mx-3 my-3" style="width: 18rem;position:relative; left:600px;">
+            <img src={{pf5}} class="card-img-top" style="height:350px" alt="img">
+            <div class="card-body text-center fst-italic">
+                <h5 class="card-title">MR. RITESH PRASAD</h5>
+                <p class="card-text">COMPUTER SCIENCE AND ENGINEERING DEPARTMENT</p>
+                <p class="card-text">INSTRUCTOR</p>
+
+            </div>
+        </div>
+        <h2 class="text-center fst-italic"><u>GROUP MEMBERS</u></h2>
         <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
             <img src={{pf1}} class="card-img-top" style="height:350px" alt="img">
-            <div class="card-body">
+            <div class="card-body text-center fst-italic">
                 <h5 class="card-title">SOUDEEP DUTTA</h5>
                 <p class="card-text">BWU/ BTS/ 19/ 025</p>
                 <p class="card-text">B.TECH (CSE) 4th YEAR</p>
@@ -65,7 +76,7 @@
 
         <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
             <img src={{pf2}} class="card-img-top" style="height:350px" alt="img">
-            <div class="card-body">
+            <div class="card-body text-center fst-italic">
                 <h5 class="card-title">SOUPARNA BISWAS</h5>
                 <p class="card-text">BWU/ BTS/ 19/ 010</p>
                 <p class="card-text">B.TECH (CSE) 4th YEAR</p>
@@ -74,7 +85,7 @@
         </div>
         <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
             <img src={{pf3}} class="card-img-top" style="height:350px" alt="img">
-            <div class="card-body">
+            <div class="card-body text-center fst-italic">
                 <h5 class="card-title">AISHWARYA ROY</h5>
                 <p class="card-text">BWU/ BTS/ 19/ 009</p>
                 <p class="card-text">B.TECH (CSE) 4th YEAR</p>
@@ -82,13 +93,14 @@
             </div>
         </div>
         <div class="card d-inline-flex mx-3 my-3" style="width: 18rem;">
-            <img src={{pf4}} class="card-img-top" style="height:350px"  alt="img">
-            <div class="card-body">
+            <img src={{pf4}} class="card-img-top" style="height:350px" alt="img">
+            <div class="card-body text-center fst-italic">
                 <h5 class="card-title">SUBHADEEP NEOGI</h5>
                 <p class="card-text">BWU/ BTS/ 19/ 058</p>
                 <p class="card-text">B.TECH (CSE) 4th YEAR</p>
 
             </div>
+
         </div>
     </div>
     {% endif %}

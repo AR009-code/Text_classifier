@@ -42,9 +42,12 @@ texts = [
     "it was a difficult choice",
     "He's acting like a complete dick.",
     "The devil is good when he is pleased.",
+    "I do not like coffee",
+    "teacher giving good teachings",
+    "the teacher do not teach well"
 ]
 
-labels = np.array([1, 0, 1, 1,1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0])  # 1 for positive, 0 for negative
+labels = np.array([1, 0, 1, 1,1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0,0,1, 0])  # 1 for positive, 0 for negative
  
 #print("sample text: \n{0}".format(texts))
 print("The defined stop words :", ws.getStopWords())

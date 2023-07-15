@@ -12,6 +12,7 @@ pf1= os.path.join(img, 'soudeep.jpeg')
 pf2= os.path.join(img, 'souparna.jpeg')
 pf3= os.path.join(img, 'Aish.jpg')
 pf4= os.path.join(img, 'shubhodeep.jpeg')
+pf5= os.path.join(img, 'ritesh.jpeg')
 
 @app.route('/', methods=['GET'])
 def index():
@@ -50,7 +51,7 @@ def group_Page():
     print("group page clicked")
     hp=0
     gp=1
-    return render_template('index.html', logo_file=logo, home_page=hp, group_page=gp, pf1=pf1, pf2=pf2, pf3=pf3, pf4=pf4)
+    return render_template('index.html', logo_file=logo, home_page=hp, group_page=gp, pf1=pf1, pf2=pf2, pf3=pf3, pf4=pf4, pf5=pf5)
 
 @app.route('/old_project',methods=['GET'])
 def old_project():
